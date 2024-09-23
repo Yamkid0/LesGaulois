@@ -25,6 +25,7 @@ public class Romain {
 	}
 	
 	private void soldatSequipe(Equipment equipement) {
+		this.nbEquipment++;
 		System.out.println("Le soldat " + this.nom + " s'équipe avec un " + equipement);
 	}
 	
@@ -32,7 +33,6 @@ public class Romain {
 		switch(this.nbEquipment) {
 			case 0:
 				this.equipements[0] = equipement;
-				this.nbEquipment++;
 				this.soldatSequipe(equipement);
 				break;
 			case 1:
@@ -40,7 +40,6 @@ public class Romain {
 					System.out.println("Le soldat " + this.nom + " possède déjà un " + equipement);
 				} else {
 					this.equipements[1] = equipement;
-					this.nbEquipment++;
 					this.soldatSequipe(equipement);
 				}
 				break;
@@ -50,7 +49,7 @@ public class Romain {
 	}
 
 	public void recevoirCoup(int forceCoup) {
-		assert force >= 0;
+		assert force > 0;
 		int initForce = force;
 		force -= forceCoup;
 		if (force > 0) {
@@ -66,10 +65,15 @@ public class Romain {
 		//System.out.println(romain.prendreParole());
 		romain.parler("Le romain parle");
 		romain.recevoirCoup(1);
-		romain.recevoirCoup(1);
+		try {
+			romain.recevoirCoup(1);
+		} catch(AssertionError err) {
+			System.out.println(err);
+		}
 		
-		System.out.println(Equipment.BOUCLIER);
-		System.out.println(Equipment.CASQUE);
+		
+//		System.out.println(Equipment.BOUCLIER);
+//		System.out.println(Equipment.CASQUE);
 		
 		romain.sequiper(Equipment.CASQUE);
 		romain.sequiper(Equipment.CASQUE);
