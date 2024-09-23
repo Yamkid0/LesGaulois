@@ -29,7 +29,7 @@ public class Romain {
 		System.out.println("Le soldat " + this.nom + " s'équipe avec un " + equipement);
 	}
 	
-	private void sequiper(Equipment equipement) {
+	private void sEquiper(Equipment equipement) {
 		switch(this.nbEquipment) {
 			case 0:
 				this.equipements[0] = equipement;
@@ -75,10 +75,11 @@ public class Romain {
 //		System.out.println(Equipment.BOUCLIER);
 //		System.out.println(Equipment.CASQUE);
 		
-		romain.sequiper(Equipment.CASQUE);
-		romain.sequiper(Equipment.CASQUE);
-		romain.sequiper(Equipment.BOUCLIER);
-		romain.sequiper(Equipment.BOUCLIER);
+		romain.sEquiper(Equipment.CASQUE);
+		romain.sEquiper(Equipment.CASQUE);
+		romain.sEquiper(Equipment.BOUCLIER);
+		romain.sEquiper(Equipment.BOUCLIER);
+		romain.sEquiper(Equipment.CASQUE);
 		
 		
 	}
