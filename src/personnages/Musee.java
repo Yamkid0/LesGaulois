@@ -9,6 +9,8 @@ public class Musee {
 			Trophee trophee = new Trophee(gaulois, equipement);
 			trophees[nbTrophee] = trophee;
 			nbTrophee++;
+		} else {
+			System.out.println("Musée déjà plein");
 		}
 	}
 	
