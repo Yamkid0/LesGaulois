@@ -38,7 +38,7 @@ public class Scenario {
 		
 		Musee musee = new Musee();
 		asterix.faireUneDonation(musee);
-		System.out.println(musee.extraireInstructionOCaml());
+		System.out.println(musee.extraireInstructionsOCaml());
 
 	}
 

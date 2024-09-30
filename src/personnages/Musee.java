@@ -12,7 +12,7 @@ public class Musee {
 		}
 	}
 	
-	public String extraireInstructionOCaml() {
+	public String extraireInstructionsOCaml() {
 		String texte = "let musee = [\n";
 		for(int i = 0; i< nbTrophee; i++) {
 			texte +="\t\"" +  trophees[i].getGaulois().getNom() + "\", \"" + trophees[i].getEquipement().toString() + "\"";
